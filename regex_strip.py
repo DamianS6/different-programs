@@ -4,8 +4,8 @@ import re
 def regstrip(string, char_to_remove=None):
 	"""Does the same thing as the strip() method using regex:
 	- without 2nd argument it removes all the whitespace characters
-	- 2nd argument provides possibility to remove custom characters
-		and it must be given as a string"""
+	- 2nd argument provides possibility to remove custom characters,
+		must be given as a string"""
 
 	if char_to_remove:
 		pattern = str('[' + char_to_remove + ']')
