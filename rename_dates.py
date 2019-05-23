@@ -1,5 +1,6 @@
 """
-Renames filenames with American MM-DD-YYYY date format to European DD-MM-YYYY.
+Renames filenames in given directory
+with American MM-DD-YYYY date format to European DD-MM-YYYY.
 """
 
 import shutil
@@ -15,28 +16,32 @@ datepattern = re.compile(r"""
 	(.*?)$          # all text after the date
 	""", re.VERBOSE)
 
-# Loop over the files in the working directory.
-for amer_filename in os.listdir('.'):
-	mobj = datepattern.search(amer_filename)
 
-	# Skip files without a date.
-	if mobj is None:
-		continue
+def rename_dates(path):
 
-	# Get the different parts of the filename.
-	beforepart = mobj.group(1)
-	monthpart = mobj.group(2)
-	daypart = mobj.group(4)
-	yearpart = mobj.group(6)
-	afterpart = mobj.group(8)
+	# Loop over the files in the working directory.
+	for amer_filename in os.listdir(path):
+		mobj = datepattern.search(amer_filename)
 
-	# Form the European-style filename.
-	euro_filename = beforepart + daypart + '-' + monthpart + '-' + yearpart + afterpart
+		# Skip files without a date.
+		if mobj is None:
+			continue
 
-	# Get the full, absolute file paths.
-	abs_working_dir = os.path.abspath('.')
-	amer_filename = os.path.join(abs_working_dir, amer_filename)
-	euro_filename = os.path.join(abs_working_dir, euro_filename)
+		# Get the different parts of the filename.
+		beforepart = mobj.group(1)
+		monthpart = mobj.group(2)
+		daypart = mobj.group(4)
+		yearpart = mobj.group(6)
+		afterpart = mobj.group(8)
 
-	# Rename the files.
-	shutil.move(amer_filename, euro_filename)
+		# Form the European-style filename.
+		euro_filename = beforepart + daypart + '-' + monthpart + '-' + yearpart\
+		                + afterpart
+
+		# Get the full, absolute file paths.
+		abs_working_dir = os.path.abspath(path)
+		amer_filename = os.path.join(abs_working_dir, amer_filename)
+		euro_filename = os.path.join(abs_working_dir, euro_filename)
+
+		# Rename the files.
+		shutil.move(amer_filename, euro_filename)
