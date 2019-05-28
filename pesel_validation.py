@@ -17,4 +17,5 @@ def validate(pesel):
 		sys.stderr.write('ERROR: Number PESEL must have 11 digits.\n')
 
 
-validate(94073091467)
+if __name__ == '__main__':
+	assert validate(94073091467) == 0
