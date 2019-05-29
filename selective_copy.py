@@ -1,6 +1,6 @@
 """
 A program that copies files with a certain extension from given folder
- to a new one in given directory (or current by default).
+to a new one in given directory (or current by default).
 
 'folder' - an absolute path from where the copies are made
 'extension' - a string like '.xxx'
