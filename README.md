@@ -5,6 +5,7 @@ A bunch of different programs, usually automating some simple tasks. Ideas come 
 ### List of programs:
 <ul>
   <li> <b> quiz_gen </b> - Generates a number of randomized geography quiz about European capitals. Made with the book, changed from USA Capitals quiz to European by me.
+  <li> <b> backup_to_zip </b> - Copies an entire folder (or files with/without given extensions) into a ZIP file in current directory or given one. Started with the book, added my own functionalities.
   <li> <b> filename_remove0s </b> - Removes zeros from filenames in given directory. Doesn't remove single zeros, zeros that initialize filename or that resemble to be a part of a number (eg. 2400, 56002).
   <li> <b> find_url </b> - Find website URLs in the copied text. Requires pyperclip module.
   <li> <b> mad_libs </b> - A popular word game in which without reading the story you have to substitute some words. The program reads in a text file and lets the user replace word ADJECTIVE, NOUN, ADVERB or VERB with their own text.
@@ -16,5 +17,6 @@ A bunch of different programs, usually automating some simple tasks. Ideas come 
   <li> <b> remove_typos </b> - Remove common typos: repeated words, multiple spaces and punctuation signs. Takes a text from the clipboard and returns the corrected one. Requires pyperclip module.
   <li> <b> rename_dates </b> - Renames filenames in given directory
 with American MM-DD-YYYY date format to European DD-MM-YYYY. Made with the book.
+  <li> <b> selective_copy.py </b> - Walks through a folder tree and copy files with certain file extension to a new folder of given or default name.
   <li> <b> strong_pass_check </b> - Using regex checks if password is strong - has at least 8 characters containing both upper and lowercase letters and at least one digit.
 </ul>
