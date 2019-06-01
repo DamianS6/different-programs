@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Renames filenames in given directory
 with American MM-DD-YYYY date format to European DD-MM-YYYY.

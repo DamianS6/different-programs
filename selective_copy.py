@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 A program that copies files with a certain extension from given folder
 to a new one in given directory (or current by default).

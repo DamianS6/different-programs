@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 A program that copies an entire folder and its contents
 into a ZIP file whose filename increments.

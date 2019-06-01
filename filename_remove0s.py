@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """A program to remove zeros from filenames in given directory."""
 
 import shutil

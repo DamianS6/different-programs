@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 A popular word game in which without reading the story you have to substitute some words.
 The program reads in a text file and lets the user replace word

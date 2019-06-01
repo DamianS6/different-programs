@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """A program that looks for files larger than given size (100MB by default)."""
 
 import os

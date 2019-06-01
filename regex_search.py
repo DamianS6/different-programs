@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 A program that opens all .txt files in a given folder and searches
 for any line that matches a user-supplied regular expression.
